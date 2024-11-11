@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game - Competition Mode</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-header">
+        <h1>Memory Game</h1>
+        <div class="stats">
+            <div>Level: <span id="currentLevel">Easy</span></div>
+            <div>Moves: <span id="moves">0</span></div>
+            <div>Time: <span id="time">0</span>s</div>
+        </div>
+        <select class="level-selector" id="levelSelector" onchange="changeLevel()">
+            <option value="easy">Easy (6 pairs)</option>
+            <option value="medium">Medium (8 pairs)</option>
+            <option value="hard">Hard (12 pairs)</option>
+            <option value="expert">Expert (15 pairs)</option>
+        </select>
+    </div>
+    <div class="level-info" id="levelInfo"></div>
+    <div class="timer-bar">
+        <div class="timer-progress" id="timerProgress"></div>
+    </div>
+    <div class="game-container" id="gameContainer"></div>
+    <div class="controls">
+        <button class="btn start-btn" id="startBtn" onclick="startGame()">Start Game</button>
+        <button class="btn restart-btn" onclick="restartGame()">Restart Game</button>
+    </div>
+
+    <div class="countdown-overlay" id="countdownOverlay">
+        <div class="countdown" id="countdown">3</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
